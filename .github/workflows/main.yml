@@ -1,0 +1,26 @@
+名称：Github JD-Sign机器人
+
+在：
+    推送：
+        分行：
+            -大师
+    时间表：
+        - cron的：' 5月16日* * * '
+职位：
+    建立：
+        运行：ubuntu-latest
+
+        步骤：
+            -名称：结帐代码
+              用途：actions / checkout @ v2
+            -名称：使用Node.js
+              用途：actions / setup-node @ v1
+              与：
+                节点版本：“的12.x ”
+            -名称：运行应用
+              运行：npm install
+            -运行：节点app.js
+              env：
+                JD_COOKIE：$ {{ secrets.JD_COOKIE }}
+                JD_COOKIE_2：$ {{机密。JD_COOKIE_2 }}
+                PUSH_KEY：$ {{ secrets.PUSH_KEY }}
